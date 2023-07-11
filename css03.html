@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 속성(properties)</title>
+    <style>
+        #area {border:3px solid red; padding: 30px;
+        width: 1000px; margin: 30px auto;}
+        .box {width:200px; height: 100px; margin: 15px; 
+            border: 2px solid blueviolet; }
+        .inline .box { display:inline; }
+        .block .box {display: block;}
+        .inlineblock .box {display: inline-block;}
+        .none .box {display: none;}
+        .block .box:first-of-type {border-radius: 70px;}
+        .block .box:nth-of-type(2) {border-radius: 20px;}
+        .block .box:nth-of-type(3) {border-radius: 10px;}
+        .block .box:nth-of-type(4) {border-radius: 40px;}
+
+        /*child는 순서, nth-of-type은 요소를 먼저*/
+        /* 이중클래스 */
+        /*css 선택자의 우선 순위
+        id > class > tag 무조건 우선 순위가 많고 높은 것*/
+    </style>
+</head>
+<hr>
+    <div id="area">
+        <section class="con inline">
+            <h2 class="tit">인라인 배치</h2>
+            <br><hr><br>
+            <div class="box">박스1</div>
+            <div class="box">박스2</div>
+            <div class="box">박스3</div>
+            <div class="box">박스4</div>
+        </section>
+        <br><hr><br>
+        <section class="con block">
+            <h2 class="tit">블록 배치</h2>
+            <br><hr><br>
+            <div class="box">박스1</div>
+            <div class="box">박스2</div>
+            <div class="box">박스3</div>
+            <div class="box">박스4</div>
+        </section>
+        <br><hr><br>
+        <section class="con inlineblock">
+            <h2 class="tit">인라인 블록 배치</h2>
+            <div class="box">박스1</div>
+            <div class="box">박스2</div>
+            <div class="box">박스3</div>
+            <div class="box">박스4</div>
+        </section>
+        <br><hr><br>
+        <section class="con none">
+            <h2 class="tit">출력안함</h2>
+            <br><hr><br>
+            <div class="box">박스1</div>
+            <div class="box">박스2</div>
+            <div class="box">박스3</div>
+            <div class="box">박스4</div>
+        </section>
+        <br><hr><br>
+        <section class="con">
+            <h2 class="tit">
+                <div class="box">박스1
+                    <span class="data"></span>
+                </div>
+                <div class="box">박스2
+                    <span class="data"></span>
+                </div>
+                <div class="box">박스3
+                    <span class="data"></span>
+                </div>
+                <div class="box">박스4
+                    <span class="data"></span>
+                </div>
+            </h2>
+        </section>
+    </div>
+
+
+
+    <h1>css 출력 및 박스 관련 속성</h1>
+    <p>display, visibility, opacity, width, height, overflow, margin, padding, border 등</p>
+    <p>모든 속성의 값에 initial(초기값), inherit(부모요소로 부터 상속)</p>
+    
+    <hr>
+
+    <h1>화면출력 속성</h1>
+    <h2>display</h2>
+    <p>태그마다 화면 출력 모드가 block, inline, inline-block 등으로 구성됨.</p>
+
+    <h2>inline</h2>
+    <p>속성요소 : span, a, strong, em, ins 등</p>
+    <p>특징 : 한 줄 안에 자동 줄바꿈이 될 때까지 배치됨 크기지정을 할 수 없어 width, height, line-height, text-indent, text-align
+        padding-top, padding-bottom, margin-top, margin-bottom 등의 속성을 지정한다고 하더라도 결과에 반영되지 못 함.</p>
+
+    <h2>block</h2>
+    <p>속성요소 : div, h1~h6, p, section, article, header, footer ...</p>
+    <p>특징 : 자동으로 다음 줄에 배치가 되며, 크기와 관련된 속성 지정 가능.</p>
+    <p>부여 가능한 속성 값 : inline | block | inline-block | none</p>
+    <p>부여 가능한 속성 값 2 : contents, flex, grid, box, table, inline-flex, inline-grid,
+        inline-table, list-item, run-in, table-caption, table-column, table-row, table-cell,
+        table-header-group, table-footer-group, table-column-group, table-row-group</p>
+    
+    <hr>
+    
+    <h2>visibility(가시속성)</h2>
+    <p>보일지 보이지 않을지를 나태내는 속성</p>
+    <p>visible | hidden | collapse</p>
+    
+    <hr>
+
+    <h2>opacity</h2>
+    <p>불투명 정도를 나타내는 속성</p>
+    <p>0~1까지의 실수 또는 정수로 수치를 표시하며, 0은 투명, 1은 불투명임</p>
+    <p>해당 요소의 글자와 모든 콘텐츠(배경 이미지 및 배경색)를 불투명 또는 투명하게 지정 가능함.</p>
+
+    <hr>
+
+    <h2>width(너비속성)</h2>
+    <p>가로(폭=너비)의 크기를 지정하는 속성</p>
+    <p>auto | length | %</p>
+    <p>length는 px, pt, pc, cm, mm, in(ch), vw, vimin, vmax 등의 단위로 지정이 가능</p>
+    <p>기본 화면 출력 속성이 블록요소 또는 인라인블록요소 등에만 크기지정이 가능함.</p>
+
+    <hr>
+
+    <h2>height(높이속성)</h2>
+    <p>세로(높이)의 크기를 지정하는 속성</p>
+
+    <hr>
+
+    <h2>overflow(흘러넘침속성)</h2>
+    <p>콘텐츠의 양이 지정한 크기(폭/넓이)보다 더 클 경우 지정</p>
+    <p>auto|visible|hidden(흘러넘친 것은 표시x)|scroll|clip</p>
+    <p>세부속성 : overflow-x(가로), overflow-y(세로)</p>
+
+    <hr>
+
+    <h2>margin(바깥여백)</h2>
+    <p>현재 테두리(콘텐츠) 영역의 바깥 여백으로서 여러 콘텐츠와 콘텐츠 사이의 여백</p>
+    <p>auto | length | %</p>
+    <p>length는 px, pt, pc, cm, mm, in(ch), vw, vimin, vmax 등의 단위로 지정이 가능</p>
+    <p>margin 값 : margin = 위/아래, 좌/우  margin = 상 우 하 좌</p>
+    <p>margin 30px auto - 가운데 배치 할 때 많이 씀.</p>
+    <p>통합 속성 먼저 걸고, 아래에 세부속성.</p>
+    <p>세부 속성 : margin-top, margin-bottom, margin-left, margin-right</p>
+
+    <hr>
+
+    <h2>padding(안쪽여백)</h2>
+    <p>테두리와 콘텐츠 사이의 여백</p>
+    <p>auto | length | % </p>
+    <p>length는 px, pt, pc, cm, mm, in(ch), vw, vimin, vmax 등의 단위로 지정이 가능</p>
+    <p>padding 값 : padding = 위/아래, 좌/우   padding = 상 우 하 좌</p>
+    <p>세부속성 : padding-top, padding-bottom, padding-left, padding-right</p>
+    <p>통합 속성 먼저 걸고, 아래에 세부속성, 지정한 폭/높이에 padding과 border 값을 더한 값이 실제 콘텐츠의 크기가 됨. (왼 border + 왼 padding + 콘텐츠 + 우 padding + 우 border == 실제크기)</p>
+
+    <hr>
+
+
+</body>
+</html>
