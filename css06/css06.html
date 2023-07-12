@@ -4,15 +4,212 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>css 속성 = 문단</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
+    />
+    <style>
+      @font-face {
+        font-family: 'NanumBarunpen';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      #area {
+        width: 1200px;
+        margin: 20px auto;
+      }
+      .f1 {
+        color: #930;
+        font-size: 20pt;
+        line-height: 2;
+        font-weight: bold;
+      }
+      .f1 span {
+        font-weight: 200;
+        color: aquamarine;
+      }
+
+      .f2 {
+        <!-- 모든 폰트가 다 되는 것은 아님. -->
+        font-stretch: extra-expanded;
+        text-transform:uppercase;
+      }
+
+      .f3 {text-transform: capitalize; font-variant: small-caps;}
+
+
+      .f4 {font-size: 20px;
+        text-indent: 24px;
+        font-style: italic;
+        font-family: 'NanumBarunpen', cursive;
+        text-decoration: overline;
+        letter-spacing: 8px;
+      }
+      .f5 {font-size: 20px;
+        text-indent: -24px;
+        font-family: oblique;
+        font-family: 'Noto Sans KR', sans-serif;
+        text-decoration: line-through;
+        word-spacing: 20px;
+      }
+      .f6 {
+        text-decoration: underline;
+      }
+      .f7 {
+        white-space: nowrap; overflow:hidden; text-overflow: ellipsis;
+      }
+      .f8 {
+        width: 120px;
+        margin: 40px auto;
+        word-break: keep-all;
+      }
+    </style>
   </head>
   <body>
-    <h1>글자 및 문단 관련 속성</h1>
-    <!--장평 : 한 글자의 가로크기와 세로크기의 비율-->
-    <p>
-      color, font-size, font-weight, font-stretch, text-transform,
-      font-varient(대문자를 소문자쪽으로 크기를 줄임), font-style, font-family,
-      font_kerning(글자와 글자 사이의 간격)
-    </p>
-    <p>문단 관련 : letter-spacing, line-height</p>
+    <div id="area">
+      <p class="f1">
+        천재신승원 바보신승원1 <span>천재신승원</span> 바보신승원1 천재신승원
+        바보신승원1 우리나라 천재신승원 바보신승원1 대한민국 천재신승원
+        바보신승원1 korean kimkitae korean kimkitae
+      </p>
+      <p class="f2">
+        천재신승원 바보신승원2 천재신승원 바보신승원2 천재신승원 바보신승원2
+        우리나라 천재신승원 바보신승원2 대한민국 천재신승원 바보신승원2 korean
+        kimkitae korean kimkitae
+      </p>
+      <p class="f3">
+        천재신승원 바보신승원3 천재신승원 바보신승원3 천재신승원 바보신승원3
+        우리나라 천재신승원 바보신승원3 대한민국 천재신승원 바보신승원3 korean
+        kimkitae korean kimkitae
+      </p>
+      <p class="f4">
+        천재신승원 바보신승원4 천재신승원 바보신승원4 천재신승원 바보신승원4
+        우리나라 천재신승원 바보신승원4 대한민국 천재신승원 바보신승원4 korean
+        kimkitae korean kimkitae
+      </p>
+      <p class="f5">
+        천재신승원 바보신승원5 천재신승원 바보신승원5 천재신승원 바보신승원5
+        우리나라 천재신승원 바보신승원5 대한민국 천재신승원 바보신승원5 korean
+        kimkitae korean kimkitae
+      </p>
+      <p class="f6">
+        천재신승원 바보신승원6 천재신승원 바보신승원6 천재신승원 바보신승원6
+        우리나라 천재신승원 바보신승원6 대한민국 천재신승원 바보신승원6 korean
+        kimkitae korean kimkitae
+      </p>
+      <p class="f7">
+        천재신승원 바보신승원7 천재신승원 바보신승원7 천재신승원 바보신승원7
+        우리나라 천재신승원 바보신승원7 대한민국 천재신승원 바보신승원7 korean
+        kimkitae korean kimkitae
+      </p>
+      <p class="f8">
+        천재신승원 바보신승원8 천재신승원 바보신승원8 천재신승원 바보신승원8
+        우리나라 천재신승원 바보신승원8 대한민국 천재신승원 바보신승원8 korean
+        kimkitae korean kimkitae
+      </p>
+      <p class="f9">
+        천재신승원 바보신승원9 천재신승원 바보신승원9 천재신승원 바보신승원9
+        우리나라 천재신승원 바보신승원9 대한민국 천재신승원 바보신승원9 korean
+        kimkitae korean kimkitae
+      </p>
+      <p class="f10">
+        천재신승원 바보신승원10 천재신승원 바보신승원10 천재신승원 바보신승원10
+        우리나라 천재신승원 바보신승원10 대한민국 천재신승원 바보신승원10 korean
+        kimkitae korean kimkitae
+      </p>
+    </div>
+    <div class="con">
+      <h1>글자 및 문단 관련 속성</h1>
+      <!--장평 : 한 글자의 가로크기와 세로크기의 비율-->
+      <p>
+        글자관련: color, font-size, <strong>font-weight</strong>, font-stretch,
+        text-transform, font-varient(대문자를 소문자쪽으로 크기를 줄임),
+        <strong>font-style</strong>, <strong>font-family</strong>,
+        font_kerning(글자와 글자 사이의 간격)
+      </p>
+      <p>
+        문단 관련 : letter-spacing, line-height, text-align, text-indent,
+        text-decoration, text-justify, text-orientation,
+        <strong>text-overflow, white-space, word-break</strong>
+      </p>
+
+      <br />
+      <hr />
+      <br />
+
+      <h2>들여쓰기 / 내어쓰기</h2>
+      <p>text-indent : length</p>
+      <p>length 단위 :</p>
+      <p>들여쓰기</p>
+      <p>
+        내어쓰기 : 다른 줄에 비해 첫 번째 줄이 더 나오게 쓰는 것<br />
+        text-indent:-20px
+      </p>
+      <br />
+      <hr />
+      <br />
+
+      <h2>글자 장식</h2>
+      <p>text-decoration : none | underline | overline | line-through</p>
+      <p>글자의 위, 중간, 아래에 줄을 표시하도록 하는 속성</p>
+      <p>
+        none을 제외한 다른 값은 중복해서 사용할 수 있음.<br />
+        text-decoration:overline underline<br />
+        text-decoration:underline double #369, overline wave #c00;
+      </p>
+
+      <h3>세부속성</h3>
+      <p>text-decoration-color : 줄의 색</p>
+      <p>text-decoration-line : 줄의 위치(underline/overline/line-through)</p>
+      <p>text-decoration-style : 줄의 종류(solid/wave/double/dotted/dashed)</p>
+      <br />
+      <hr />
+      <br />
+
+      <h2>배분정렬</h2>
+      <p>text-justify : auto | none | inter-character | inter-word</p>
+      <p>
+        단어 또는 글자 단위로 한 줄의 데이터를 분량을 똑같이 배분정렬 할 수 있는
+        속성
+      </p>
+      <br />
+      <hr />
+      <br />
+
+      <h2>글자 진행 방향</h2>
+      <p>
+        text-orientation:mixed | upright | sideways | sideways-right |
+        use-glyph-orientation
+      </p>
+      <br />
+      <hr />
+      <br />
+
+      <h2>글자 흘러 넘침</h2>
+      <p>text-overflow : clip | ellipsis | 특정문자</p>
+      <p>
+        text-overflow는 overflow:hidden이며, white-space:nowrap인 경우에
+        유효하다.
+      </p>
+      <br />
+      <hr />
+      <br />
+
+      <h2>내용 보호 / 줄 끝 처리</h2>
+      <p>
+        white-space : normal | nowrap | pre | pre-line(줄바꿈) | pre-wrap(줄바꿈
+        + )
+      </p>
+      <p>
+        하나의 단어가 한 줄에 입력되어야만 하기 때문에 그 때 한 줄에 단어가
+        배치가 되든지, 아니면, 영문배치문법을 무시하고, 단어 중간을 자를지 또는
+        하나의 문장을 한 줄로만 표시할지 그 문장의 줄의 끝을 어떻게 처리할지
+        정하는 속성
+      </p>
+
+      <h2>단어 처리</h2>
+      <p>word-break : normal | break-all | keep-all | break-all |</p>
+    </div>
   </body>
 </html>
